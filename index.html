@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere Volume Calculator</title>
+    <style>
+        #image{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Input radius and get the volume of a sphere</p>
+    <p>Radius</p>
+    <input oninput="calc()" id="radius">
+    <p>Volume</p>
+    <input value="0.0000" id="volume" oninput="calc()">
+    <script>
+        function calc(){
+            r = (document.querySelector("#radius").value); 
+            var x = (4/3) * Math.PI * Math.pow(r,3); 
+            document.querySelector("#volume").value=x; 
+        }
+    </script>
+    <div id="image"><img src = ./IMG_4168.jpg height="100px"></div>
+     
+</body>
+</html>
